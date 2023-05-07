@@ -10,7 +10,7 @@ class Customer(models.Model):
     last_name = models.CharField(max_length=100)
     address = models.CharField(max_length=100)
     phone = models.CharField(max_length=100)
-    vehical
+    #vehical 
     
     def __str__(self):
         return self.name

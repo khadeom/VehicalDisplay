@@ -1,0 +1,8 @@
+{% extends 'home.html' %}
+{% block content %}
+    <h1>Entries</h1>
+    {% for en in entries %}
+    {{ en.first_name }}  {{en.last_name}}  {{en.address}}  {{en.phone}}
+    <br/>
+    {% endfor %}
+{% endblock %}
