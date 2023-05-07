@@ -1,19 +1,20 @@
 from django.db import models
 from datetime import date, datetime
-
+from django.contrib.auth.models import User
 # Create your models here.
 
 
 
 class Customer(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     address = models.CharField(max_length=100)
     phone = models.CharField(max_length=100)
-    vehical
+    
     
     def __str__(self):
-        return self.name
+        return self.user.username
 
 class Vehicle(models.Model):
     model = models.CharField(max_length=100)
